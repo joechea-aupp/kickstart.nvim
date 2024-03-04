@@ -779,9 +779,10 @@ require('lazy').setup {
     config = function()
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
+      require('nvim-treesitter.install').compilers = { 'zig' }
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+        ensure_installed = { 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'javascript' },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
@@ -819,3 +820,6 @@ require('lazy').setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.api.nvim_set_keymap('n', '<C-j>', '5j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '5k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
