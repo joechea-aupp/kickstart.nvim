@@ -779,7 +779,7 @@ require('lazy').setup {
     config = function()
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
-      require('nvim-treesitter.install').compilers = { 'zig' }
+      require('nvim-treesitter.install').compilers = { 'zig', 'clang' }
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
         ensure_installed = { 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'javascript', 'tsx', 'typescript', 'python' },
