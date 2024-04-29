@@ -489,7 +489,7 @@ require('lazy').setup {
 
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap
-          map('L', vim.lsp.buf.hover, 'Hover Documentation')
+          map('T', vim.lsp.buf.hover, 'Hover Documentation')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header
@@ -854,3 +854,6 @@ vim.api.nvim_set_keymap('i', 'kj', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader><F5>', ':UndotreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'H', '<cmd>bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'L', '<cmd>bprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>Explore<CR>', { noremap = true, silent = true })
