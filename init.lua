@@ -150,6 +150,7 @@ vim.opt.scrolloff = 10
 
 -- change tabstop to 2 spaces, since i mainly write js code
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
